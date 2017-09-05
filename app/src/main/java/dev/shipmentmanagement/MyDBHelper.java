@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import dev.shipmentmanagement.DBSchema.Table;
+import dev.shipmentmanagement.DBSchema.Table2;
 
 public class MyDBHelper extends SQLiteOpenHelper {
 
@@ -35,11 +36,23 @@ public class MyDBHelper extends SQLiteOpenHelper {
                 " ) "
         );
 
+        sqLiteDatabase.execSQL("create table " + Table2.TNAME + " ( " +
+                " _id integer primary key autoincrement, " +
+                Table2.Cols.Shipment_No + ", " +
+                Table2.Cols.Date + ", " +
+                Table2.Cols.Shipped_By + ", " +
+                Table2.Cols.Shipped_To + ", " +
+                Table2.Cols.Remarks +
+                " ) "
+        );
+
+
         Log.d(LOG_TAG,"onCreate finished");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1)
+    {
 
     }
 }

@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="viewEnd"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:onClick="NewUser"
         android:textColor="#0000ff"
         android:text="New user? Click here!"/>

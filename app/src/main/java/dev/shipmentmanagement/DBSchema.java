@@ -19,4 +19,19 @@ public class DBSchema
             public static final String Email = "Email";
         }
     }
+
+    public static final class Table2
+    {
+        public static final String TNAME = "Shipment_Table";
+        public static final class Cols
+        {
+            public static final String Shipment_No = "Shipment_No";
+            public static final String Date = "Date";
+            public static final String Shipped_By = "Shipped_By";
+            public static final String Shipped_To = "Shipped_To";
+            public static final String Remarks = "Remarks";
+        }
+    }
+
+
 }

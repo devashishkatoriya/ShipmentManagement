@@ -1,6 +1,7 @@
 package dev.shipmentmanagement;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,6 +55,9 @@ public class UserEntryActivity extends AppCompatActivity {
             e4.setText("");
             e5.setText("");
             e6.setText("");
+
+            Intent i = new Intent("dev.shipmentmanagement.LoginActivity");
+            startActivity(i);
         }
         Log.d(LOG_TAG,"insertEntry finished");
     }

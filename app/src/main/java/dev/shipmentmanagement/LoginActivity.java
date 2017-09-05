@@ -14,13 +14,14 @@ public class LoginActivity extends AppCompatActivity
 {
     private static final String LOG_TAG = "LoginActivityDebug";
     private EditText e1,e2;
+    public boolean hasLoggedIn;
+    public String LoggedUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         e1 = (EditText) findViewById(R.id.LoginEditText1);
         e2 = (EditText) findViewById(R.id.LoginEditText2);
@@ -57,6 +58,7 @@ public class LoginActivity extends AppCompatActivity
             if (cursor.moveToFirst())                       //Check if cursor is not NULL
             {
                 String name,pass;
+                boolean flag = false;
                 do
                 {
                     Log.d(LOG_TAG, "Got id " + cursor.getString(0));
@@ -69,19 +71,24 @@ public class LoginActivity extends AppCompatActivity
                         if(pass.equals(cPass))
                         {
                             Toast.makeText(this, "Login Successful!!", Toast.LENGTH_LONG).show();
+                            hasLoggedIn = true;
+                            LoggedUser = cName;
+                            flag = true;
                             break;
                         }
                         else
                         {
-                            Toast.makeText(this, "Password Invalid!", Toast.LENGTH_SHORT).show();
+                            flag = false;
                         }
                     }
                     else
                     {
-                        Toast.makeText(this, "Username Invalid!", Toast.LENGTH_SHORT).show();
+                        flag = false;
                     }
 
                 } while (cursor.moveToNext());
+                if(!flag)
+                    Toast.makeText(this, "Username or Password invalid!", Toast.LENGTH_SHORT).show();
             }
         }
         catch (Exception e)
