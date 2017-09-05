@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="dev.shipmentmanagement.UserEntryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/UserEntryTextView1"
+        android:textSize="20sp"
+        android:text="New user Registration"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/UserEntryTextView2"
+        android:textSize="16sp"
+        android:layout_below="@id/UserEntryTextView1"
+        android:text="Please enter the following details..."/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/UserEntryTextView2"
+        android:hint="Your Name"
+        android:inputType="textPersonName"
+        android:id="@+id/UserEntryEditText1"/>
+
+    <EditText
+        android:id="@+id/UserEntryEditText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserEntryEditText1"
+        android:hint="Phone No."
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/UserEntryEditText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserEntryEditText2"
+        android:hint="Address"
+        android:inputType="textPostalAddress" />
+
+    <EditText
+        android:id="@+id/UserEntryEditText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserEntryEditText3"
+        android:hint="Email"
+        android:inputType="textPostalAddress" />
+
+    <EditText
+        android:id="@+id/UserEntryEditText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserEntryEditText4"
+        android:gravity="end"
+        android:layout_marginTop="16dp"
+        android:hint="Username"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/UserEntryEditText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_below="@id/UserEntryEditText5"
+        android:hint="Password"
+        android:inputType="textVisiblePassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/UserEntryButton1"
+        android:text="Submit"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -16,7 +16,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".SecondActivity">
+            <intent-filter>
+                <action android:name="dev.shipmentmanagement.SecondActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TrackingActivity">
+            <intent-filter>
+                <action android:name="dev.shipmentmanagement.TrackingActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UserEntryActivity">
+            <intent-filter>
+                <action android:name="dev.shipmentmanagement.UserEntryActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="dev.shipmentmanagement.LoginActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
