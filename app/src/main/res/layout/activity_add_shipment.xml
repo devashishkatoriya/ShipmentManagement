@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="dev.shipmentmanagement.AddShipmentActivity">
+
+    <!--todo:add code for display elements-->
+    <TextView
+        android:id="@+id/AddShipmentTextView1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Add Shipment details :"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="#0000ff">
+    </TextView>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddShipmentEditText1"
+        android:hint="Shipment#">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddShipmentEditText2"
+        android:hint="Date">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddShipmentEditText3"
+        android:hint="Shipped By">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddShipmentEditText4"
+        android:hint="Shipped To">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddShipmentEditText5"
+        android:hint="Remarks">
+    </EditText>
+
+    <Button
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add">
+    </Button>
+
+</LinearLayout>

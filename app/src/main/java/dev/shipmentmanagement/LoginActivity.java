@@ -52,13 +52,13 @@ public class LoginActivity extends AppCompatActivity
         String cName = e1.getText().toString();
         String cPass = e2.getText().toString();
 
-        Cursor cursor = myQuery(null,null);
+        Cursor cursor = myQuery(DBSchema.Table.TNAME,null,null);
         try
         {
             if (cursor.moveToFirst())                       //Check if cursor is not NULL
             {
                 String name,pass;
-                boolean flag = false;
+                boolean flag;
                 do
                 {
                     Log.d(LOG_TAG, "Got id " + cursor.getString(0));
@@ -103,13 +103,13 @@ public class LoginActivity extends AppCompatActivity
         Log.d(LOG_TAG,"read finished");
     }
 
-    private Cursor myQuery(String whereClause,String[] whereArgs)
+    private Cursor myQuery(String table_name, String whereClause,String[] whereArgs)
     {
         Log.d(LOG_TAG,"At myQuery");
 
         //String[] columns = new String[] { DBSchema.Table.Cols.Person_NAME, DBSchema.Table.Cols.Phone_NO };
         Cursor cursor = MainActivity.myDatabase.query
-                (DBSchema.Table.TNAME,      // a. table
+                        (table_name,        // a. table
                         null,               // b. column names
                         whereClause,        // c. selections
                         whereArgs,          // d. selections args
