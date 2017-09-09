@@ -21,18 +21,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/button21"
         android:layout_centerHorizontal="true"
-        android:text="Tracking"
-        android:onClick="goToTracking"
+        android:text="Add Shipment"
+        android:onClick="goToAddShipment"
         android:id="@+id/button22"/>
 
-    <ImageButton
-        android:id="@+id/imageButton"
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/button22"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
-        android:contentDescription="A button with Image"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:text="Track Shipment"
+        android:onClick="goToDisplayShipment"
+        android:id="@+id/button23"/>
 
 </RelativeLayout>

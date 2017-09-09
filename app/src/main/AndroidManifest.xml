@@ -29,15 +29,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TrackingActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="dev.shipmentmanagement.TrackingActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".UserEntryActivity"
             android:noHistory="true"
             android:screenOrientation="portrait">
@@ -57,8 +48,23 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShipmentDisplayActivity" />
-        <activity android:name=".AddShipmentActivity"></activity>
+        <activity
+            android:name=".ShipmentDisplayActivity">
+            <intent-filter>
+                <action android:name="dev.shipmentmanagement.ShipmentDisplayActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddShipmentActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="dev.shipmentmanagement.AddShipmentActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

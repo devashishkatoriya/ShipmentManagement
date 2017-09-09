@@ -52,10 +52,11 @@ public class ShipmentDisplayActivity extends AppCompatActivity {
                 {
                     Log.d(LOG_TAG, "Got id " + cursor.getString(0));
 
-
-                    //Todo: read the appropriate columns
-                    StringArray.addElement("" + cursor.getString(1));
-                    StringArray.addElement("" + cursor.getString(2));
+                    StringArray.addElement("Shipment_# : " + cursor.getString(1));
+                    StringArray.addElement("Date       : " + cursor.getString(2));
+                    //StringArray.addElement("Shipped by\t: " + cursor.getString(3));
+                    StringArray.addElement("Shipped to : " + cursor.getString(4));
+                    //StringArray.addElement("Remarks \t: " + cursor.getString(5));
 
                 } while (cursor.moveToNext());
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.my_list_view, StringArray);

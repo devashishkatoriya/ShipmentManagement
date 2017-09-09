@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context="dev.shipmentmanagement.ShipmentDisplayActivity">
 
     <ListView
         android:id="@+id/listView"
         android:dividerHeight="1dp"
         android:entries="@array/black_array"
-        android:headerDividersEnabled="true"
+        android:headerDividersEnabled="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </ListView>
 
 

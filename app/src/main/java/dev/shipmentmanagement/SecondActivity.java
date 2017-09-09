@@ -14,9 +14,15 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
     }
 
-    public void goToTracking(View v)
+    public void goToAddShipment(View v)
     {
-        Intent i = new Intent("dev.shipmentmanagement.TrackingActivity");
+        Intent i = new Intent("dev.shipmentmanagement.AddShipmentActivity");
+        startActivity(i);
+    }
+
+    public void goToDisplayShipment(View v)
+    {
+        Intent i = new Intent("dev.shipmentmanagement.ShipmentDisplayActivity");
         startActivity(i);
     }
 
